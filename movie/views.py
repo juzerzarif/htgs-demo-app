@@ -3,12 +3,12 @@ from django.http import JsonResponse
 from django.http import HttpResponse
 
 
-
 # Create your views here.
 
+
 def getMovies(request):
-    movies = ["movie1","Mean girls", "Cats", "Star Wars", "The Godfather"]
-    return JsonResponse({"results": movies})
+    movies = ["movie1", "Mean girls", "Cats", "Star Wars", "The Godfather"]
+    return render(request, "movie/get-movies.html", {"movies": movies})
 
 
 def commentOnMovie(request):
